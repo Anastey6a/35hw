@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення</title>
+</head>
+<body>
+    <button onclick="showOrderForm()">Купити</button>
+    <div id="orderForm" style="display: none;">
+        <h2>Форма оформлення замовлення</h2>
+        <form onsubmit="return submitOrder()">
+            <label for="fullName">ПІБ покупця:</label><br>
+            <input type="text" id="fullName" required><br>
+            <label for="city">Місто:</label><br>
+            <select id="city" required>
+                <option value="">Оберіть місто</option>
+                <option value="Київ">Київ</option>
+                <option value="Харків">Харків</option>
+                <option value="Львів">Львів</option>
+                <!-- Додайте інші міста, які необхідно -->
+            </select><br>
+            <label for="postOffice">Склад Нової пошти:</label><br>
+            <input type="text" id="postOffice" required><br>
+            <label for="payment">Оплата:</label><br>
+            <input type="radio" id="cashOnDelivery" name="payment" value="Післяплати" required>
+            <label for="cashOnDelivery">Післяплати</label>
+            <input type="radio" id="creditCard" name="payment" value="Оплата карткою" required>
+            <label for="creditCard">Оплата карткою</label><br>
+            <label for="quantity">Кількість товару:</label><br>
+            <input type="number" id="quantity" required><br>
+            <label for="comment">Коментар до замовлення:</label><br>
+            <textarea id="comment"></textarea><br>
+            <button type="submit">Підтвердити замовлення</button>
+        </form>
+    </div>
+    <div id="orderInfo" style="display: none;">
+        <!-- Сюди буде виводитися інформація про замовлення -->
+    </div>
+    <script src="35.js"></script>
+</body>
+</html>
